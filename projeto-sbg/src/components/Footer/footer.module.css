@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+
+    /* Tipografia */
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+.footer {
+    background-color: var(--azul-médio);
+    width: 100%;
+    height: 415px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    bottom: 0;
+}
+
+.logoContainer {
+    width: 260px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.navContainer {
+    height: 80%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.navTitleContainer {
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.navTitle {
+    font-family: var(--font-fira-sans-light);
+    font-size: 1.8rem;
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+.navList {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22.5px;
+}
+
+.navItem {
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.navItem:hover {
+    color: var(--branco);
+}
+
+.navItem::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; /* Ajustado para acompanhar o texto */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--branco);
+    transition: width 0.4s ease;
+}
+
+.navItem:hover::after {
+    width: 100%; /* Barra agora será do tamanho do texto */
+}
+
+.Links {
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 1.3rem;
+    color: var(--branco);
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.rigths {
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: var(--azul-escuro);
+}
+
+.rigthsPhrase {
+    font-family: var(--font-fira-sans-extralight);
+    color: var(--branco);
+}
+
+
+@media (max-width: 1130px) 
+
+{
+
+.navContainer{
+width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logoContainer{
+ width: 150px;
+ margin-bottom: 200px;
+ margin-right: 40px;
+ margin-left: 10px;
+ padding-left: 20px;
+}
+
+}
+
+
+@media (max-width: 936px) {
+
+    .navContainer{
+        width: 170px;
+    }
+
+    .Links{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 848px) {
+
+    .navContainer{
+
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .logoContainer{
+
+        margin-right: -20px;
+        margin-left: -25px;
+    }
+}
+
+@media (max-width: 750px) {
+
+ .navList{
+    gap: 12px;
+ }
+
+ .logoContainer{
+    width: 170px;
+    padding-right: 25px;
+ }
+}
+
+@media (max-width: 700px) {
+
+    .footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logoContainer {
+        width: 70%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+      
+    }
+
+    .Links{
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .navContainer {
+        height: 350px;
+        width: 50%;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-bottom: 15px solid var(--branco);
+        
+    
+    }
+
+    .rigths {
+        margin-top: 30px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navItem::after{
+        bottom: 5px; /* Ajustado para acompanhar o texto */
+    }
+
+    .navTitle{
+
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .navContainer {
+        width: 60%;
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .navTitle {
+        font-size: 2.5rem;
+    }
+
+    .Links {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navItem {
+        margin-bottom: 15px;
+    }
+
+    .rigthsPhrase {
+        font-size: 1rem;
+    }
+}
